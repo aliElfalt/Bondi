@@ -1,1 +1,1 @@
-### Bondi Template A Website With HTML, CSS And Javascript
+### Bondi Template A Website With HTML, CSS, Javascript And Bootstrap
