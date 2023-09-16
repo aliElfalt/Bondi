@@ -1,0 +1,223 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --yellow: #ffc400;
+  --red: #ff3150;
+  --section: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  color: var(--yellow) !important;
+  background-color: var(--red) !important;
+}
+.main-title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100px;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green);
+}
+/* Scroll To Top Button */
+.scroll-to-top {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  border: none !important;
+  z-index: 100;
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark);
+  min-height: 72px;
+}
+.navbar .navbar-brand {
+  cursor: pointer;
+}
+.navbar .nav-link {
+  cursor: pointer;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--green) !important;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.navbar .search {
+  display: none;
+  color: var(--green);
+  border-left: 1px solid var(--green);
+}
+/* End Navbar */
+/* Start Landing */
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 72px);
+}
+.landing h1 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 8px;
+  min-height: 45px;
+}
+.landing h1 .cursor {
+  width: 3px;
+  height: 44px;
+  background-color: #eee;
+  position: absolute;
+  right: 0;
+  animation: cursor 1s linear infinite;
+}
+/* End Landing */
+/* Start Features */
+.features .icons {
+  height: 200px;
+}
+.features .icons svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icons .number {
+  font-size: 12rem;
+  color: var(--section);
+}
+.features .icons .icon {
+  color: var(--green);
+  font-size: 64px;
+}
+.features h4 {
+  color: var(--yellow);
+}
+/* End Features */
+/* Start Our Work */
+.our-work {
+  background-color: var(--section);
+}
+.our-work .filter li {
+  cursor: pointer;
+  transition: .5s;
+}
+.our-work .filter li.active,
+.our-work .filter li:hover {
+  border-radius: 6px;
+  color: var(--yellow) !important;
+  background-color: var(--red) !important;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-image);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #33d1ccb3;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(-100% - 5px));
+  transition: .5s;
+  z-index: 1;
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* End Our Work */
+/* Start Stuff */
+.stuff .container > p {
+  max-width: 500px;
+}
+/* End Stuff */
+/* Start Our Team */
+.our-team {
+  background-color: var(--section);
+}
+.our-team .heading h1 {
+  font-weight: bold;
+  color: var(--yellow);
+}
+.our-team .row > div {
+  position: relative;
+  bottom: 0;
+  transition: .5s;
+}
+.our-team .row > div:hover {
+  bottom: 10px;
+}
+.our-team .card h3 {
+  width: 100%;
+  color: white;
+  background-color: #33d1cccc;
+  left: 0;
+  top: -48px;
+  padding: 10px;
+}
+/* End Our Team */
+/* Start Project */
+.project {
+  background-color: var(--dark);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow);
+}
+.subscribe input {
+  border: none;
+  outline: none;
+}
+.subscribe input::placeholder {
+  color: white;
+}
+.subscribe button {
+  background-color: var(--dark);
+  color: var(--yellow);
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  background-color: var(--dark);
+}
+footer .info .copyright span:first-of-type {
+  color: var(--green);
+}
+footer .info .copyright span:last-of-type {
+  color: var(--yellow);
+}
+footer .contact svg {
+  color: white;
+  cursor: pointer;
+}
+footer .contact .facebook {
+  background-color: #1877f2;
+}
+footer .contact .twitter {
+  background-color: #1da1f2;
+}
+footer .contact .linkedin {
+  background-color: #0077b5;
+}
+footer .contact .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
+/* Animation */
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
